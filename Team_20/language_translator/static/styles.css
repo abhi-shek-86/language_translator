@@ -1,0 +1,164 @@
+/* General Styles */
+
+@font-face {
+    font-family: 'jedira-regular';
+    src: url('fonts/Jedira\ Font/jedira-regular') format('woff2'),
+        url('fonts/Jedira\ Font/jedira-regular') format('woff'),
+        url('fonts/Jedira\ Font/jedira-regular') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main{
+    font-family: judeira-regular;
+}
+
+#from_lang{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+
+
+}
+
+#to_lang{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2ebdc;
+}
+
+/* App Container */
+.app-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #0056b3;
+}
+
+/* Language Selection */
+.language-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 45%;
+}
+
+.swap-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 40%;
+    cursor: pointer;
+}
+
+/* Text Input Fields */
+.translation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.text-section {
+    width: 100%;
+    text-align: left;
+    padding-right: 21px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    background-color: #f0f0f0;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.translate-button, .clear-button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    border-color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    color: black;
+}
+
+.translate-button {
+    background-color: #f2ebdc;
+}
+
+.clear-button {
+    background-color: #f2ebdc;
+}
+
+.translate-button:hover {
+    background-color: #66ae52e5;
+}
+
+.clear-button:hover {
+    background-color: #de2c3e;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        width: 90%;
+    }
+
+    textarea {
+        height: 70px;
+    }
+}

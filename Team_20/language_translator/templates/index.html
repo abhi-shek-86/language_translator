@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Translator</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h1 class="main">Text Translator</h1>
+        </header>
+
+        <!-- Language Selection -->
+        <div class="language-section">
+            <select id="from_lang">
+                {% for code, name in languages.items() %}
+                    <option value="{{ code }}" {% if code == 'en' %}selected{% endif %}>{{ name }}</option>
+                {% endfor %}
+            </select>
+
+            <button class="swap-button" onclick="swapLanguages()">⇆</button>
+
+            <select id="to_lang">
+                {% for code, name in languages.items() %}
+                    <option value="{{ code }}" {% if code == 'it' %}selected{% endif %}>{{ name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Text Input Areas -->
+        <div class="translation-container">
+            <div class="text-section">
+                <label for="original_text">Original Text:</label>
+                <textarea id="original_text" placeholder="Enter text here..."></textarea>
+            </div>
+
+            <div class="text-section">
+                <label for="translated_text">Translated Text:</label>
+                <textarea id="translated_text" placeholder="Translation will appear here..." readonly></textarea>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button onclick="translateText()" class="translate-button">Translate</button>
+            <button onclick="clearText()" class="clear-button">Clear</button>
+        </div>
+    </div>
+
+    <script src="static/scripts.js"></script>
+</body>
+</html>
